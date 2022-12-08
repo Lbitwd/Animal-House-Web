@@ -107,18 +107,17 @@ const Register = () => {
 
 
   return (
-    <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.2,ease:'linear'}} exit={{opacity:0}} className='flex w-full h-full justify-center text-secondary flex-wrap md:flex-nowrap'>
-      <div className='w-full lg:w-7/12 xl:w-9/12 bg-registerImg bg-cover bg-center'>
-        <div className='flex flex-col justify-center relative w-full h-screen bg-primary/70'>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.2,ease:'linear'}} exit={{opacity:0}} className='flex flex-wrap justify-center w-full h-full text-secondary md:flex-nowrap'>
+      <div className='w-full bg-center bg-cover lg:w-7/12 xl:w-9/12 bg-registerImg'>
+        <div className='relative flex flex-col justify-center w-full h-screen bg-primary/70'>
           <h1 className='lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-extrabold font-heading text-white mx-4 md:mx-6 my-2 max-w-[700px] px-2 '>
-            Raising Voice For The Voiceless
+            Animals House
           </h1>
           <h2 className='mx-4 md:mx-6 px-2 text-white font-light md:font-normal max-w-[500px] text-base lg:text-lg'>
-            Be a part of Pakistan’s first e-platform adding meaning to precious
-            lives around us and giving them another chance.
+            We hope we can find suitable owners for homeless animals and give them a warm home
           </h2>
           <Icons classes='text-white mt-4 px-2 mx-4 md:mx-6' />
-          <span className='md:hidden block'>
+          <span className='block md:hidden'>
             <KeyboardArrowDownIcon
               onClick={() => document.getElementById('form')?.scrollIntoView()}
               className='absolute text-white bottom-[110px] left-[calc(50%_-_22px)] animate-bounce hover:bg-black/20 p-1 rounded-[50%] cursor-pointer '
@@ -140,19 +139,19 @@ const Register = () => {
             <Link to='/'>Back to home </Link>
           </span>
           <Logo />
-          <h1 className='font-heading font-bold text-xl md:text-2xl my-1'>
+          <h1 className='my-1 text-xl font-bold font-heading md:text-2xl'>
             Create An Account
           </h1>
-          <h2 className='text-xs md:text-sm text-stone-500 font-medium mt-1 mb-10'>
+          <h2 className='mt-1 mb-10 text-xs font-medium md:text-sm text-stone-500'>
             Enter your details and let&apos;s get started
           </h2>
           {error && (
-            <span className='p-2 sm:px-4 sm:py-3  mb-5 rounded bg-rose-200 text-rose-500 lg:text-base md:text-sm text-xs'>
+            <span className='p-2 mb-5 text-xs rounded sm:px-4 sm:py-3 bg-rose-200 text-rose-500 lg:text-base md:text-sm'>
               {error}
             </span>
           )}
           {success && (
-            <span className='p-2 sm:px-4 sm:py-3 mb-5 rounded bg-emerald-100  text-emerald-500 lg:text-base md:text-sm text-xs'>
+            <span className='p-2 mb-5 text-xs rounded sm:px-4 sm:py-3 bg-emerald-100 text-emerald-500 lg:text-base md:text-sm'>
               Account created successfully, you will be redirected to login.
             </span>
           )}
@@ -173,7 +172,7 @@ const Register = () => {
           <div className='max-w-[350px] my-2 w-full relative'>
             <span
               onClick={() => setVisible(!visible)}
-              className='absolute right-2 bottom-4 text-stone-500 cursor-pointer'
+              className='absolute cursor-pointer right-2 bottom-4 text-stone-500'
             >
               {visible ? (
                 <VisibilityOffIcon fontSize='small' />
@@ -186,10 +185,10 @@ const Register = () => {
               required
               type={visible ? 'text' : 'password'}
               placeholder='Password'
-              className='placeholder:italic border-b-2 transition-all duration-300 hover:border-blue-500 focus:border-blue-500 w-full pb-2 px-1 my-2 text-sm focus:outline-none  '
+              className='w-full px-1 pb-2 my-2 text-sm transition-all duration-300 border-b-2 placeholder:italic hover:border-blue-500 focus:border-blue-500 focus:outline-none '
             />
           </div>
-          <span className='text-stone-500 md:text-sm text-xs flex items-center gap-2 my-2 w-full'>
+          <span className='flex items-center w-full gap-2 my-2 text-xs text-stone-500 md:text-sm'>
             <input
               className='mb-[2px] md:mb-1'
               type='checkbox'
@@ -197,7 +196,7 @@ const Register = () => {
             />
             Remember Me
           </span>
-          <span className='text-stone-500 md:text-sm text-xs mt-1 mb-6 w-full'>
+          <span className='w-full mt-1 mb-6 text-xs text-stone-500 md:text-sm'>
             By creating an account you agree to our{' '}
             <b className='text-blue-500 cursor-pointer hover:underline'>
               {' '}
@@ -211,7 +210,7 @@ const Register = () => {
             classes='text-secondary mt-4 border-none w-fit'
             theme='outlined'
           />
-          <span className='transition-all md:text-sm text-xs text-stone-500 font-medium pt-4 mt-4 w-full text-center border-t-2 cursor-pointer hover:text-stone-400'>
+          <span className='w-full pt-4 mt-4 text-xs font-medium text-center transition-all border-t-2 cursor-pointer md:text-sm text-stone-500 hover:text-stone-400'>
             <Link to='/login'> Already have an account ? </Link>
           </span>
         </form>

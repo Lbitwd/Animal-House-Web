@@ -34,7 +34,7 @@ export const needHelp = [
 export const navData = [
   'Donate-/contact',
   'Adopt-/contact',
-  'Report-/contact',
+  'Events-/events',
   'About Us-/about',
   'Contact Us-/contact'
 ];

@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import About from './pages/About';
 import User from './pages/User';
+import Events from './pages/Events';
 
 
 const client = new ApolloClient({
@@ -40,6 +41,7 @@ function App() {
           />
           <Route path='/pet/:id' element={<SinglePet />} />
           <Route path='/contact' element={<Contact/>} />
+          <Route path='/events' element={<Events />} />
           <Route path='/about' element={<About/>} />
         </Routes>
         <Footer />
