@@ -13,7 +13,7 @@ const mailer = (mail) => {
     const mailOptions = {
       from: process.env.MAIL,
       to: mail,
-      subject: 'Bayzuban NewsLetter',
+      subject: 'Animal House',
       text: 'Thank you for subscribing to us, you will regularly hear from us now.',
     };
     transport.sendMail(mailOptions, (err, info) => {

@@ -20,17 +20,38 @@
 ## :pages:
 ### User Register & Login page
 - with password encryption
-![](https://github.com/hunter10471/MERN_animal_resuce/blob/master/screenshots/login&register.png?raw=true)
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/login%26register.png)
 
 ### Home Page
-![](https://github.com/hunter10471/MERN_animal_resuce/blob/master/screenshots/home.png?raw=true)
+- After login, user can land in the homepage to see the detail information.
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/home.png)
 
-### Pet page
-![](https://raw.githubusercontent.com/hunter10471/MERN_animal_resuce/master/screenshots/ss3.png)
+### Aboutus Page
+- Display our mission, vision and achievements, and the things we can do to help.
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/about.png)
+
+### Services page
+- onlie shop & shopping cart
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/services.png)
+
+### Events&Projects Page
+- Relevant events & Fundraisers 
+- Recent projects.
+- Lastest news
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/events.png)
+
+### Adoption Page
+- Display available animal for adoption.
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/adoption.png)
 
 
+### Contact Us Page
+- There's our contact phone number, email and address. User can also contact us by submitting message.
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/contact.png)
 
-
+### System Admin Page
+- CRUD the pets
+![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/system.png)
 
 
 
