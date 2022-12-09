@@ -19,7 +19,7 @@ const Hero = () => {
             className='rotate-[-45deg] rounded-[50%] text-primary bg-white p-2 border-4 border-primary'
           />
           <h2 className='text-base sm:text-lg md:text-xl font-medium text-justify'>
-            Bay-zuban has been working for almost a decade now and since day our
+            Animal House has been working for almost a decade now and since day our
             ambition was to safeguard the interests of those who cannot speak
             for themselves. We at bay-zuban are proud of what we do and will
             continue to do so till god wills.

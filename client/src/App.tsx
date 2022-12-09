@@ -12,7 +12,7 @@ import { AnimatePresence } from 'framer-motion';
 import About from './pages/About';
 import User from './pages/User';
 import Events from './pages/Events';
-
+import Services from './pages/Services';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -43,6 +43,7 @@ function App() {
           <Route path='/contact' element={<Contact/>} />
           <Route path='/events' element={<Events />} />
           <Route path='/about' element={<About/>} />
+          <Route path='/services' element={<Services/>} />
         </Routes>
         <Footer />
       </AnimatePresence>

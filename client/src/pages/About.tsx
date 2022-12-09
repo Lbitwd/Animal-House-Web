@@ -1,15 +1,19 @@
 import React from 'react';
 import Logo from '../components/Logo';
-import bear from '../assets/images/bear.jpg';
-import deer from '../assets/images/deer.jpg';
+import icon2 from '../assets/images/icon2.png';
+import icon3 from '../assets/images/icon3.png';
+import icon4 from '../assets/images/icon4.png';
+import bearbg from '../assets/images/bearbg.jpg';
+import deerbg from '../assets/images/deerbg.jpg';
 import blob from '../assets/images/blob.svg';
+import cat from '../assets/images/cat.jpg';
 import Help from '../components/Help';
 import { Link } from 'react-router-dom';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { motion } from 'framer-motion';
 
 const pText1 =
-  'We at Bezubaan are working as the voice of the voiceless. We strongly believe that animals deserve to live their life free of pain and full of hope and love. Therefore, we try to give them the life we believe they deserve on a daily basis. Unfortunately, in Pakistan animals are stray with no one to take care of them or are being abandoned by their owners. Many of them become ill, injure or suffer abuses on the streets and require doctors, medicine, surgeries, and shelter to survive. Therefore, Bezubaan is the right place to report any abuse you see around your home, office or any other location.';
+  'We at Animal House are working as the voice of the voiceless. We strongly believe that animals deserve to live their life free of pain and full of hope and love. Therefore, we try to give them the life we believe they deserve on a daily basis. Unfortunately, over the world animals are stray with no one to take care of them or are being abandoned by their owners. Many of them become ill, injure or suffer abuses on the streets and require doctors, medicine, surgeries, and shelter to survive. Therefore, Animal House is the right place to report any abuse you see around your home, office or any other location.';
 const pText2 =
   'Our vision is to rescue, rehabilitate and rehome animals in crisis, ensure healthy pets through education, advocacy and affordable services, and inspire a community where the animal-human bond is celebrated and nurtured. One day, we hope to see no animal left abandoned or being tortured in the streets of Pakistan and each one of them to have a place they could call home.';
 const About = () => {
@@ -23,10 +27,10 @@ const About = () => {
     >
       <div className=' bg-aboutImg bg-cover bg-center min-h-[60vh] w-full'>
         <div className='w-full min-h-[60vh] flex items-center bg-primary/20'>
-          <h1 className=' text-4xl sm:text-5xl lg:text-6xl font-heading font-bold max-w-[550px] tracking-wide leading-[50px] sm:leading-[60px]  lg:leading-[70px] ml-10 md:ml-20 '>
-            Who are we? And what do we do at{' '}
+          <h1 className='text-white text-4xl sm:text-5xl lg:text-6xl font-heading font-bold max-w-[550px] tracking-wide leading-[50px] sm:leading-[60px]  lg:leading-[70px] ml-10 md:ml-20 '>
+            Who are we? Fight for welfare{' '}
             <b className='text-primary w-fit items-center gap-2 flex pb-2 border-b-2 border-primary'>
-              Bay-Zuban <Logo />{' '}
+              Animal House <Logo />{' '}
             </b>
           </h1>
         </div>
@@ -47,12 +51,15 @@ const About = () => {
           <span className='w-[40px] h-[4px] bg-primary absolute top-0 left-1'></span>
           <h1 className='text-2xl sm:text-3xl lg:text-4xl font-medium tracking-widest font-heading '>
             OUR MISSION
+            <img className='absolute w-[10vw] lg:w-[6vw] items-center justify-center'
+              src={icon4}
+              alt='icon4'/>
           </h1>
           <div className='my-10 flex flex-wrap gap-4 lg:gap-2 xl:gap-6'>
             <img
               className='w-full h-[400px] lg:h-auto lg:w-[30vw] object-cover object-center shadow-xl rounded-xl'
-              src={bear}
-              alt='bear'
+              src={bearbg}
+              alt='bearbg'
             />
             <p className=' text-base sm:text-lg lg:text-xl h-full bg-stone-200 p-10 sm:p-14 lg:p-20 w-full lg:max-w-[700px]'>
               {pText1}
@@ -70,15 +77,46 @@ const About = () => {
           <span className='w-[40px] h-[4px] bg-primary absolute top-0 left-1'></span>
           <h1 className='text-2xl sm:text-3xl lg:text-4xl font-medium tracking-widest font-heading '>
             OUR VISION
+            <img className='absolute w-[10vw] lg:w-[6vw] items-center justify-center'
+              src={icon3}
+              alt='icon3'/>
           </h1>
           <div className='my-10 flex lg:flex-row-reverse flex-wrap gap-4 lg:gap-2 xl:gap-6'>
             <img
               className='w-full h-[400px] lg:h-auto lg:w-[30vw] object-cover object-center shadow-xl rounded-xl'
-              src={deer}
-              alt='deer'
+              src={deerbg}
+              alt='deerbg'
             />
             <p className=' text-base sm:text-lg lg:text-xl h-auto bg-stone-200 p-10 sm:p-14 lg:p-20 w-full lg:max-w-[700px]'>
               {pText2}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-col relative mx-4 lg:mx-0 xl:mx-4 mb-10 mt-20 max-w-screen-2xl'>
+        <img
+          className='absolute opacity-20 z-[-1] w-[70vw] lg:w-[40vw] top-[-25%] right-[-35%]'
+          src={blob}
+          alt='blob'
+        />
+        <div className='flex flex-col relative py-5 mt-20'>
+          <span className='w-[40px] h-[4px] bg-primary absolute top-0 left-1'></span>
+          <h1 className='text-2xl sm:text-3xl lg:text-4xl font-medium tracking-widest font-heading '>
+            OUR ACHIEVEMENT
+            <img className='absolute w-[10vw] lg:w-[6vw] items-center justify-center'
+              src={icon2}
+              alt='icon2'/>
+          </h1>
+          <div className='my-10 flex flex-wrap gap-4 lg:gap-2 xl:gap-6'>
+            <img
+              className='w-full h-[400px] lg:h-auto lg:w-[30vw] object-cover object-center shadow-xl rounded-xl'
+              src={cat}
+              alt='cat'
+            />
+            <p className=' text-base sm:text-lg lg:text-xl h-full bg-stone-200 p-10 sm:p-14 lg:p-20 w-full lg:max-w-[700px]'>
+            Animal House is now taking care of more than 300+ stray animals. Our location is too deep inside and do not have water supply, we can only use water from the mountain and our water will stopped every few days.
+            Currently we are raising funds for shelter construction. So that our shelter can be more complete and suitable for furries to stay, and so we can help more animals in need.
+              
             </p>
           </div>
         </div>

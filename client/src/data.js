@@ -14,7 +14,7 @@ export const aboutUs = [
 ];
 
 export const donorRescue = [
-  'Become a donor on bay-zuban',
+  'Become a donor on Animal House',
   'Affiliate program',
   'Animal adoptions',
   'Donate animal food',
@@ -23,7 +23,7 @@ export const donorRescue = [
 ];
 
 export const needHelp = [
-  'Bay-zuban is battling COVID-19',
+  'Aniaml House is battling COVID-19',
   'Your account',
   'Donations & rations',
   'Adoptions & shelters',
@@ -32,7 +32,7 @@ export const needHelp = [
 ];
 
 export const navData = [
-  'Donate-/contact',
+  'Services-/Services',
   'Adopt-/contact',
   'Events-/events',
   'About Us-/about',

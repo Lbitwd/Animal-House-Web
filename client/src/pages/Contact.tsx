@@ -22,13 +22,13 @@ const LeftContainer = () => {
       </div>
       <div className='flex flex-col gap-10 my-2 text-sm md:text-base'>
         <span className='flex items-center gap-3'>
-          <LocalPhoneIcon /> +92 300 573879
+          <LocalPhoneIcon /> 1 (936) 433-9847
         </span>
         <span className='flex items-center gap-3'>
-          <EmailIcon /> bezubaan@gmail.com
+          <EmailIcon /> 6150AnimalHome@gmail.com
         </span>
         <span className='flex items-center gap-3'>
-          <LocationOnIcon /> F-19, Saddar, Karachi, Pakistan.
+          <LocationOnIcon /> Northeastern University.
         </span>
       </div>
       <Icons />
