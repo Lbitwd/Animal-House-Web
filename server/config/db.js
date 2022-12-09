@@ -5,7 +5,7 @@ const connect = async () => {
     console.log('Could not connect to database.');
     return;
   }
-  console.log('Connected to database.');
+  console.log('Connected to database successful!.');
 };
 
 module.exports = connect;
