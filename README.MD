@@ -68,5 +68,5 @@ _Animal House_ an animal rescue portal where you can adopt different pet as well
 
 ### Shuya Yang
 
-- 💼 [LinkedIn]www.linkedin.com/in/shuyayang1217
+- 💼 [LinkedIn](www.linkedin.com/in/shuyayang1217)
 - 📧 Contact: yang.shuya1@northeastern.edu
