@@ -60,11 +60,6 @@ _Animal House_ an animal rescue portal where you can adopt different pet as well
 - There's our contact phone number, email and address. User can also contact us by submitting message.
   ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/contact.png)
 
-### Admin Page
-
-- CRUD the pets
-  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/system.png)
-
 ## 👤 Author
 
 ### Shuya Yang
