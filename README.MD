@@ -1,51 +1,73 @@
-# Animal House
-*Animal House* an animal rescue portal where you can adopt different pet as well as put multiple pets up for adoption. The portal has an admin and nomral user views where admin can add and delete pets whereas user can only view them or adopt them.  
+# 🐾Animal House
 
-## Roles: Users & Admin
-- User registration & login & adopt animals
-- Admin adds & deletes animals 
+_Animal House_ an animal rescue portal where you can adopt different pet as well as put multiple pets up for adoption. The platform has two views:
 
-## Technical Stack
-- Fronted Interface：HTML，CSS，Bootstrap，JavaScript，TypeScript
-- Fronted Framework：React JS，TailwindCss
-- Backend Tech：Node JS，Axios，Redux
+- Admin View: Admins can add, edit, and delete pets.
+- User Views: User registration & login & adopt animals ...
+
+## 🛠️ Technical Stack
+
+### Frontend
+
+- Interface：HTML，CSS，Bootstrap，JavaScript，TypeScript
+- Framework：React.js, Tailwind CSS
+- State Management: Redux
+- API Handling: Axios
+
+### Backend
+
+- Server: Node.js, Express.js
 - Database：MongoDB
+- Authentication: JWT, Google OAuth
+- GraphQL (Apollo Server) - Efficient Data Fetching
 
-## Pages:
+## 📸 Pages:
+
 ### User Register & Login page
+
 - with password encryption
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/login%26register.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/login%26register.png)
 
-## Home Page
+### Home Page
+
 - After login, user can land in the homepage to see the detail information.
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/home.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/home.png)
 
-### AboutUs Page
+### About Us Page
+
 - Display our mission, vision and achievements, and the things we can do to help.
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/about.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/about.png)
 
 ### Services page
-- onlie shop & shopping cart
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/services.png)
 
-### Events&Projects Page
-- Relevant events & Fundraisers 
+- Online shopping
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/services.png)
+
+### Events & Projects Page
+
+- Relevant events & Fundraisers
 - Recent projects.
 - Lastest news
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/events.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/events.png)
 
 ### Adoption Page
-- Display available animal for adoption.
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/adoption.png)
 
+- Display available animals for adoption.
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/adoption.png)
 
 ### Contact Us Page
+
 - There's our contact phone number, email and address. User can also contact us by submitting message.
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/contact.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/contact.png)
 
-### System Admin Page
+### Admin Page
+
 - CRUD the pets
-![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/system.png)
+  ![](https://github.com/Lbitwd/INFO6150-final/blob/ShuyaYang/screenshots/system.png)
 
+## 👤 Author
 
+### Shuya Yang
 
+- 💼 LinkedIn
+- 📧 Contact: yang.shuya1@northeastern.edu
