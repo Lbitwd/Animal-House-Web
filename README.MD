@@ -5,6 +5,10 @@ _Animal House_ an animal rescue portal where you can adopt different pet as well
 - Admin View: Admins can add, edit, and delete pets.
 - User Views: User registration & login & adopt animals ...
 
+## 🚀 Live Demo
+
+- Check out the live application deployed on Heroku here: [Animal House](https://animal-house-web-ddeb88020b2b.herokuapp.com/)
+
 ## 🛠️ Technical Stack
 
 ### Frontend
