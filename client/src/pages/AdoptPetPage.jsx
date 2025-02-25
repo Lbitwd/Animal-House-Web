@@ -116,7 +116,7 @@ const SinglePet = () => {
                     </h2>
 
                     {/* Adoption Info */}
-                    <div className="flex items-center w-full max-w-[450px] gap-4 p-4 border-[1px] border-primary rounded-xl my-2 md:my-4">
+                    <div className="flex items-center w-full max-w-[450px] gap-4 p-4 border-[1px] hover:border-primary rounded-xl my-2 md:my-4">
                       <span className="p-1 sm:p-2 rounded-xl bg-primary/20 text-primary">
                         <PetsIcon />
                       </span>
@@ -163,12 +163,15 @@ const SinglePet = () => {
                     {/* Donate and Adopt Buttons */}
                     <div className="flex gap-4 mt-6">
                       <Button
-                        classes="bg-primary text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
+                        classes="bg-primary text-white px-6 py-3 min-w-[200px] rounded-lg shadow-md hover:bg-primary hover:text-white hover:scale-105 transition-transform"
                         text="Donate to My Care"
                         onClick={() => setShowPopup(true)} // 🔑 Opens popup
                       />
                       <Link to="/contact">
-                        <Button classes="mt-0" text="Adopt Me" theme="filled" />
+                        <Button
+                        classes="bg-white border border-primary min-w-[200px] text-primary px-6 py-3 rounded-lg shadow-lg hover:bg-primary hover:text-white hover:scale-105 transition-all"
+                        text="Adopt Me"
+                      />
                       </Link>
                     </div>
 

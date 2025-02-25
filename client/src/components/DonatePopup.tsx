@@ -1,15 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
+import axios from "axios";
 
 const DonatePopup = ({ onClose }) => {
   const [donationType, setDonationType] = useState("once");
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("USD");
+  const [convertedAmount, setConvertedAmount] = useState("");
+  const [rates, setRates] = useState({});
+  const [currencies, setCurrencies] = useState([]);
   const [showComment, setShowComment] = useState(false);
   const [comment, setComment] = useState("");
   const [savedComment, setSavedComment] = useState("");
+
+  // Fetch exchange rates and available currencies from API
+  useEffect(() => {
+    const fetchRates = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.exchangerate-api.com/v4/latest/USD"
+        );
+        setRates(response.data.rates);
+        setCurrencies(Object.keys(response.data.rates));
+      } catch (error) {
+        console.error("Failed to fetch exchange rates:", error);
+      }
+    };
+
+    fetchRates();
+  }, []);
+
+  // Convert donation amount based on currency and update input field
+  useEffect(() => {
+    if (amount && rates[currency]) {
+      const converted = (parseFloat(amount) * rates[currency]).toFixed(2);
+      setConvertedAmount(converted);
+      setAmount(converted); // Update input field with converted value
+    }
+  }, [currency, rates]);
 
   const handleCurrencyChange = (e) => setCurrency(e.target.value);
 
@@ -23,7 +53,7 @@ const DonatePopup = ({ onClose }) => {
   // 🟢 Handle donation
   const handleDonate = () => {
     alert(
-      `Thank you for donating ${amount || "0"} ${currency} ${
+      `Thank you for donating ${convertedAmount || "0"} ${currency} ${
         donationType === "once" ? "" : `(${donationType})`
       }! 🐶🐱`
     );
@@ -81,7 +111,7 @@ const DonatePopup = ({ onClose }) => {
             <div className="mt-4">
               <button
                 onClick={() => setShowComment(true)}
-                className="text-primary underline hover:text-primary/70"
+                className="text-primary hover:text-primary/70"
               >
                 📝 Add a comment
               </button>
@@ -115,14 +145,16 @@ const DonatePopup = ({ onClose }) => {
               {donationOptions[donationType].map((value) => (
                 <button
                   key={value}
-                  onClick={() => setAmount(value)}
+                  onClick={() =>
+                    setAmount((value * (rates[currency] || 1)).toFixed(2))
+                  }
                   className={`px-3 py-2 rounded-lg border ${
-                    amount === value
+                    amount === (value * (rates[currency] || 1)).toFixed(2)
                       ? "border-primary bg-primary/20 shadow-md"
                       : "border-gray-300 hover:border-primary"
                   } transition-all duration-300`}
                 >
-                  {currency === "USD" ? `$${value}` : `${value} ${currency}`}
+                  {`${(value * (rates[currency] || 1)).toFixed(2)} ${currency}`}
                 </button>
               ))}
             </div>
@@ -139,6 +171,11 @@ const DonatePopup = ({ onClose }) => {
                 placeholder="Enter custom amount"
                 className="w-full border border-gray-300 rounded-lg p-2 bg-white shadow-inner focus:ring-2 focus:ring-primary"
               />
+              {convertedAmount && (
+                <p className="mt-2 text-sm text-gray-500">
+                  Converted: {convertedAmount} {currency}
+                </p>
+              )}
             </div>
 
             {/* 🌍 Currency Selector */}
@@ -152,11 +189,11 @@ const DonatePopup = ({ onClose }) => {
                 className="border border-gray-300 rounded-lg p-2 bg-white"
                 title="Select currency"
               >
-                <option value="USD">USD</option>
-                <option value="CNY">RMB (CNY)</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="JPY">JPY</option>
+                {currencies.map((cur) => (
+                  <option key={cur} value={cur}>
+                    {cur}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -192,7 +229,7 @@ const DonatePopup = ({ onClose }) => {
           </button>
 
           {/* 💬 Comment Section */}
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="mt-8 text-2xl font-bold text-primary mb-4">
             💬 Leave a Comment
           </h2>
           <textarea
